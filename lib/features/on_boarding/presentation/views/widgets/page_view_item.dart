@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
+import 'package:fruits_hub/core/utils/app_text_styles.dart';
+import 'package:fruits_hub/features/auth/presentation/views/login_view.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -7,11 +11,13 @@ class PageViewItem extends StatelessWidget {
       required this.image,
       required this.backgroundImage,
       required this.subTitle,
-      required this.title});
+      required this.title,
+      required this.isVisible});
 
   final String image, backgroundImage;
   final String subTitle;
   final Widget title;
+  final isVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +42,26 @@ class PageViewItem extends StatelessWidget {
                   image,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.all(16),
-                child: Text('تخط'),
+              Visibility(
+                visible: isVisible,
+                child: GestureDetector(
+                  onTap: () {
+                    Prefs.setBool(kIsOnBoardingViewSeen, true);
+                    Navigator.of(context)
+                        .pushReplacementNamed(LoginView.routeName);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      'تخط',
+                      style: TextStyles.regular13.copyWith(
+                        color: const Color(
+                          0xFF949D9E,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
@@ -52,11 +75,16 @@ class PageViewItem extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 16,
+            horizontal: 37,
           ),
           child: Text(
             subTitle,
             textAlign: TextAlign.center,
+            style: TextStyles.semiBold13.copyWith(
+              color: const Color(
+                0xFF4E5456,
+              ),
+            ),
           ),
         ),
       ],
