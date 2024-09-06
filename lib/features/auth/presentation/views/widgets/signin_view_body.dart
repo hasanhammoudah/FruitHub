@@ -10,7 +10,6 @@ import 'package:fruits_hub/core/widgets/password_field.dart';
 import 'package:fruits_hub/features/auth/presentation/cubits/signin_cubit/signin_cubit.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widgets/dont_have_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widgets/or_divider.dart';
-import 'package:fruits_hub/features/auth/presentation/views/widgets/signin_view_body_bloc_consumer.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widgets/social_login_button.dart';
 
 class SignInViewBody extends StatefulWidget {
@@ -103,7 +102,9 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 height: 16,
               ),
               SocialLoginButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SigninCubit>().signinWithApple();
+                },
                 title: 'تسجيل بواسطة أبل',
                 image: Assets.imagesApplIcon,
               ),
