@@ -9,6 +9,7 @@ final class ProductsLoading extends ProductsState {}
 
 final class ProductsFailure extends ProductsState {
   final String errMessage;
+
   ProductsFailure(this.errMessage);
 }
 
