@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/features/auth/presentation/views/signin_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/signup_view.dart';
 import 'package:fruits_hub/features/best_selling_fruits/presentation/views/best_selling_view.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/product_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
@@ -13,16 +14,18 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const SplashView());
     case OnBoardingView.routeName:
       return MaterialPageRoute(builder: (context) => const OnBoardingView());
-       case SignInView.routeName:
+    case SignInView.routeName:
       return MaterialPageRoute(builder: (context) => const SignInView());
-       case SignupView.routeName:
+    case SignupView.routeName:
       return MaterialPageRoute(builder: (context) => const SignupView());
-        case MainView.routeName:
+    case MainView.routeName:
       return MaterialPageRoute(builder: (context) => const MainView());
-        case BestSellingView.routeName:
+    case BestSellingView.routeName:
       return MaterialPageRoute(builder: (context) => const BestSellingView());
-       case ProductView.routeName:
+    case ProductView.routeName:
       return MaterialPageRoute(builder: (context) => const ProductView());
+    case CheckoutView.routeName:
+      return MaterialPageRoute(builder: (context) => const CheckoutView());
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());
   }

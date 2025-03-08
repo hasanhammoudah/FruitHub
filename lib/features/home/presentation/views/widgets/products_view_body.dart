@@ -5,8 +5,6 @@ import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/core/widgets/search_text_field.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/products_grid_view_bloc_builder.dart';
-import 'package:fruits_hub/features/home/presentation/views/widgets/best_selling_header.dart';
-import 'package:fruits_hub/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/products_view_header.dart';
 
 class ProductViewBody extends StatefulWidget {

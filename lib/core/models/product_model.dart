@@ -1,9 +1,6 @@
-import 'dart:io';
 
 import 'package:fruits_hub/core/entities/product_entity.dart';
-import 'package:fruits_hub/core/helper_functions/get_avg_rating.dart';
 
-import 'review_model.dart';
 
 class ProductModel {
   final String name;

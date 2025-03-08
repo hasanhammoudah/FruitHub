@@ -13,7 +13,7 @@ class FeaturedItem extends StatelessWidget {
     var itemWidth = MediaQuery.sizeOf(context).width - 32;
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
-      child: Container(
+      child: SizedBox(
         width: itemWidth,
         //TODO what is AspectRatio
         child: AspectRatio(

@@ -50,6 +50,7 @@ dependencies:
   shared_preferences: ^2.3.2
   sign_in_with_apple: ^6.1.2
   skeletonizer: ^1.4.2
+  svg_flutter: ^0.0.1
 
 
 dev_dependencies:
