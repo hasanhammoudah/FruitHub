@@ -1,13 +1,12 @@
-
 import 'package:equatable/equatable.dart';
 
-class ProductEntity extends Equatable{
+class ProductEntity extends Equatable {
   final String name;
   final String code;
   final String description;
   final num price;
   final bool isFeatured;
-   String? imageUrl;
+  String? imageUrl;
   final int expirationsMonths;
   final bool isOrganic;
   final int numberOfCalories;
@@ -26,7 +25,7 @@ class ProductEntity extends Equatable{
     required this.unitAmount,
     this.isOrganic = false,
     required this.isFeatured,
-   required this.imageUrl,
+    required this.imageUrl,
   });
 
   @override

@@ -3,6 +3,7 @@ import 'package:fruits_hub/features/auth/presentation/views/signin_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/signup_view.dart';
 import 'package:fruits_hub/features/best_selling_fruits/presentation/views/best_selling_view.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.dart';
+import 'package:fruits_hub/features/home/domain/entites/cart_entity.dart';
 import 'package:fruits_hub/features/home/domain/entites/cart_item_entity.dart';
 import 'package:fruits_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/product_view.dart';
@@ -28,7 +29,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case CheckoutView.routeName:
       return MaterialPageRoute(
           builder: (context) => CheckoutView(
-                cartItems: settings.arguments as List<CartItemEntity>,
+                cartEntity: settings.arguments as CartEntity,
               ));
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());

@@ -1,6 +1,4 @@
-
 import 'package:fruits_hub/core/entities/product_entity.dart';
-
 
 class ProductModel {
   final String name;
@@ -9,7 +7,7 @@ class ProductModel {
   final num price;
   final bool isFeatured;
   final num sellingCount;
-   String? imageUrl;
+  String? imageUrl;
   final int expirationsMonths;
   final bool isOrganic;
   final int numberOfCalories;
@@ -83,5 +81,4 @@ class ProductModel {
       // 'reviews': reviews.map((e) => e.toJson()).toList()
     };
   }
-  
 }

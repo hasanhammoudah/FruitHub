@@ -14,7 +14,7 @@ abstract class TextStyles {
     fontWeight: FontWeight.w600,
     fontSize: 13,
   );
-   static const TextStyle semiBold19 = TextStyle(
+  static const TextStyle semiBold19 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 19,
   );

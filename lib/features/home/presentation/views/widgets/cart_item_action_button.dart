@@ -28,7 +28,7 @@ class CartItemActionButtons extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
-              cartItemEntity.count.toString(),
+              cartItemEntity.quantity.toString(),
               textAlign: TextAlign.center,
               style: TextStyles.bold16,
             ),
@@ -38,15 +38,13 @@ class CartItemActionButtons extends StatelessWidget {
             color: const Color(0xFFF3F5F7),
             iconColor: Colors.grey,
             onPressed: () {
-              if (cartItemEntity.count > 1) {
+              if (cartItemEntity.quantity > 1) {
                 cartItemEntity
                     .decreaseCount(context.read<CartCubit>().cartEntity);
                 context.read<CartItemCubit>().updateCartItem(cartItemEntity);
-              }else{
-              context.read<CartCubit>().deleteCartItem(cartItemEntity);
-
+              } else {
+                context.read<CartCubit>().deleteCartItem(cartItemEntity);
               }
-
             },
           ),
         ],

@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/helper_functions/build_error_bar.dart';
+import 'package:fruits_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/step_item.dart';
+import 'package:provider/provider.dart';
 
 class CheckoutSteps extends StatelessWidget {
   const CheckoutSteps(
       {super.key,
       required this.currentPageIndex,
-      required this.pageController});
+      required this.pageController,
+      required this.onTap});
   final int currentPageIndex;
   final PageController pageController;
+  final ValueChanged<int> onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +21,7 @@ class CheckoutSteps extends StatelessWidget {
         return Expanded(
           child: GestureDetector(
             onTap: () {
-              pageController.animateToPage(
-                index,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeIn,
-              );
+              onTap(index);
             },
             child: Expanded(
                 child: StepItem(

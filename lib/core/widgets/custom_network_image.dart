@@ -10,6 +10,7 @@ class CustomNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(imageUrl ?? 'https://fastly.picsum.photos/id/80/53/40.jpg?hmac=j-50ZybbMkt1IzmEDDJWpan3qQNyTq8R2qQ_OysD3Nc');
+    return Image.network(imageUrl ??
+        'https://fastly.picsum.photos/id/80/53/40.jpg?hmac=j-50ZybbMkt1IzmEDDJWpan3qQNyTq8R2qQ_OysD3Nc');
   }
 }
